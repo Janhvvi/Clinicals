@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clinical Data</title>
+  </head>
+  <body>
+      <h2>Patient Details</h2>
+      First Name:  {{patient.firstName}}<br>
+      Last Name:  {{patient.lastName}}<br>
+      Age :  {{patient.age}}<br>
+
+      <h2>Patient Clinical Data</h2>
+      <form method="post">
+        <table>
+            {{form.as_table}}
+        </table><br>
+        <input type="submit" value="Save">
+        {%csrf_token%}
+      </form>
+  </body>
+</html>
